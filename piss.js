@@ -1,3 +1,5 @@
-while(true) {
-  alert("krip anus") 
+let funny = () => {
+  while(true) {
+    alert("krip anus") 
+  }
 }

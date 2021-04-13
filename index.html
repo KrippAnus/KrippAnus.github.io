@@ -16,6 +16,37 @@
             color: rgb(255,255,255);
             font-family: Arial, Helvetica, sans-serif;
         }
+        
+        .uploadcontainer {
+        user-select: none;
+        margin-top: 15px;
+        margin: 5px;
+
+        width: fit-content;
+        /* width: 75%; */
+        padding: 15px 25px;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0);
+        background-color: white;
+        color: black;
+    }
+
+    .uploadicon {
+        vertical-align: middle;
+        height: auto;
+        width: 75px;
+        margin-right: 15px;
+        display: inline-block;
+    }
+
+    .upload {
+        font-weight: bolder;
+        display: inline-block;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: 'Roboto', sans-serif;
+    }
 
         .join {
             background-color: rgb(67,181,129);
@@ -93,6 +124,12 @@
         <center>
                 <button class="join" onclick="funnier()">click this for something funnier</button>
         </center>
+        <center>
+    <div class="uploadcontainer">
+        <img src="https://krippanus.github.io/upload.png" class="uploadicon" />
+        <div class="upload">Drag a file here to upload it!</div>
+    </div>
+</center>
     </div>
 </body>
 </html>

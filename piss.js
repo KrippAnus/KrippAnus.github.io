@@ -1,6 +1,6 @@
 let funny = () => {
   while(true) {
-    lert("krip anus") 
+    alert("krip anus") 
     alert("also your mother is fat") 
   }
 }

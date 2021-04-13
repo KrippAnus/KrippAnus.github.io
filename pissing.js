@@ -1,0 +1,4 @@
+  
+let funnier = () => {
+  window.close();
+}

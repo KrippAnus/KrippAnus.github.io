@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Turret Destruction</title>
+	<style>
+		body{
+			background-color: rgb(0,0,0);
+		}
+		#title{
+			color: rgb(255,255,255);
+			font-family: Arial;
+		}
+		#canvas{
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			background: url('./graphics/BackgroundSS3.png');
+		}
+		.button {
+			background-color: rgb(255,255,255);
+			color: rgb(0,0,0);
+			border: none;
+			border-radius: 4px;
+			font-size: 24px;
+			text-align: center;
+			text-decoration: none;
+			margin: 4px 2px;
+			padding: 15px 32px;
+			display: inline-block;
+			cursor: pointer;
+			width: 200px;
+        }
+	</style>
+	<script>
+		var musicstatus = 'off';
+		
+		function musicPlay() {
+			var word = document.getElementById("musicbutton");
+			if (musicstatus == 'off') {
+				var bgmusic = document.getElementById("bgmusic");
+				bgmusic.volume = 0.2;
+				bgmusic.play();
+				if (word.value == "Music: Off") word.value = "Music: On";
+				musicstatus = "on";
+			}
+			else {
+				var bgmusic = document.getElementById("bgmusic");
+				bgmusic.pause();
+				word.value = "Music: Off";
+				musicstatus = "off";
+			}
+		}
+	</script>
+</head>
+<body>	
+	<div id="title">
+		<center>
+			<h1>Turret Destruction!</h1>
+			<p id="scoreboard">Opps destroyed: 0</p>
+		</center>
+	</div>
+	<canvas id="canvas" width="640" height="480">
+	</canvas>
+	<br>
+	<div id="music">
+		<center>
+			<input id="musicbutton" class="button" onclick="musicPlay();" type="button" value="Music: Off"/>
+			<audio loop id="bgmusic" src="./music/bgmusic.mp3"></audio>
+		</center>
+	</div>
+	<div id="reset">
+		<center>
+			<input id="resetbutton" class="button" onclick="location.reload();" type="button" value="Reset"/>
+		</center>
+		<script src="main.js"></script>
+	</div>
+</body>
+</html>
